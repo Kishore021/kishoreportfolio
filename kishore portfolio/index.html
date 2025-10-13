@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kishore Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Kishore</a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-img">
+      <img src="main.jpg" alt="Kishore">
+    </div>
+    <div class="home-content">
+      <h3 class="intro">Hello, I'm</h3>
+      <h1 class="name">KISHORE ANUSURI</h1>
+      <h3 class="typing-text"><span></span></h3>
+      <p class="desc">
+        To apply my engineering knowledge, problem-solving skills, and passion for innovation
+        in contributing to impactful projects, while continuously advancing my technical expertise
+        and professional growth.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/kishore-anusuri" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/kishore021" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://leetcode.com/u/Kishore_8421/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="custom-icon">
+        </a>
+      </div>
+      <a href="kishore.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Why Hire Me</h2>
+        <p>I bring strong problem-solving skills, teamwork, adaptability, and technical expertise to deliver impactful and innovative solutions.</p>
+        <button class="tab-btn active" onclick="showTab('about')">About Me</button>
+        <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+        <button class="tab-btn" onclick="showTab('education')">Education</button>
+        <button class="tab-btn" onclick="showTab('achievements')">Achievements</button>
+      </aside>
+
+      <div class="content" id="tab-content">
+        <h2>About <span class="highlight">Me</span></h2>
+        <p>Hi, I'm <span class="highlight">Kishore Anusuri</span>, a final-year <span class="highlight">CSE (AI & ML)</span> student at Pragati Engineering College with a passion for leveraging technology to solve real-world challenges and create innovative solutions.</p>
+        <p>I love building <span class="highlight">web applications</span>, working with <span class="highlight">AI/ML</span>, and continuously learning new technologies to improve my skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <p class="section-desc">Here are some of the projects I’ve worked on.</p>
+
+    <section class="projects-section">
+      <h1><b>Projects</b></h1>
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="portfolio.jpg" alt="Portfolio Website">
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio site created using HTML, CSS, and JavaScript with interactive UI and responsive design.</p>
+          <p class="tech-stack">HTML5, CSS3, JavaScript</p>
+          <div class="project-links">
+            <a href="https://kishore021-portfolio.netlify.app/" class="btn" target="_blank" rel="noopener noreferrer">🌐 Live Demo</a>
+            <a href="https://github.com/kishore021/kishoreportfolio" class="btn" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="signspeak.png" alt="Indian Sign Language Translator">
+        </div>
+        <div class="project-info">
+          <h3>Indian Sign Language to Text/Speech Translator</h3>
+          <p>Developed a gesture recognition system for translating Indian Sign Language into text and speech. Participated in Smart India Hackathon (College Level).</p>
+          <p class="tech-stack">
+            🔸 Backend: Python, Flask<br>
+            🔸 Machine Learning: TensorFlow, Keras, Scikit-learn<br>
+            🔸 Computer Vision: OpenCV, MediaPipe<br>
+            🔸 Frontend: HTML, CSS, JavaScript<br>
+            🔸 Database: SQLAlchemy, SQLite<br>
+            🔸 Libraries: NumPy, SciPy, gTTS
+          </p>
+          <div class="project-links">
+            <a href="https://youtu.be/cgldqH_4-zY?si=Nuosyi83sf5arPqm" class="btn" target="_blank" rel="noopener noreferrer">🌐 Live Demo</a>
+            <a href="https://github.com/Kishore021/SignSpeak-Professional" class="btn" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="hotelmanagement.jpg" alt="Responsive Web Pages">
+        </div>
+        <div class="project-info">
+          <h3>Responsive Web Pages</h3>
+          <p>Developed responsive web pages using HTML, CSS, and JavaScript, including login forms, hotel management website and basic designs.</p>
+          <p class="tech-stack">HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a href="https://hotel-management-sample-website.netlify.app/" class="btn" target="_blank" rel="noopener noreferrer">🌐 Live Demo</a>
+            <a href="https://github.com/Kishore021/hotel" class="btn" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h1 style="text-align:center; color:#b74b4b;">Contact Me</h1>
+    <h2 style="text-align:center; color:#ddd;">I'd love to hear from you!</h2>
+
+    <div class="contact-page">
+      <!-- Info Cards -->
+      <div class="info-cards">
+        <div class="info-card">
+          <span>📞</span>
+          <p>+91 8522092619</p>
+        </div>
+        <div class="info-card">
+          <span>✉️</span>
+          <p>anusurikishore021@gmail.com</p>
+        </div>
+        <div class="info-card">
+          <span>📍</span>
+          <p>Kakinada, Andhra Pradesh, India</p>
+        </div>
+      </div>
+
+      <!-- Updated Contact Form -->
+      <div class="contact-form">
+        <form id="contact-form" action="https://formsubmit.co/anusurikishore021@gmail.com" method="POST">
+          <input type="text" name="Name" placeholder="Full Name" required>
+          <input type="email" name="Email" placeholder="Email Address" required>
+          <input type="text" name="Phone" placeholder="Phone Number">
+          <input type="text" name="Subject" placeholder="Subject">
+          <textarea name="Message" placeholder="Your Message"></textarea>
+
+          <!-- prevent redirect -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="">
+
+          <button type="submit" style="color:white;">Send Message</button>
+        </form>
+        <p id="success-message" style="display:none; color:lightgreen; margin-top:20px;">
+          ✅ Thanks for sending your message!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <hr>
+    <p>Copyright © 2025 Kishore Anusuri. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Tabs
+    const tabs = {
+      about: `
+        <h2>About <span class="highlight">Me</span></h2>
+        <p>Hi, I'm <span class="highlight">Kishore Anusuri</span>, a final-year <span class="highlight">CSE (AI & ML)</span> student at Pragati Engineering College with a passion for leveraging technology to solve real-world challenges and create innovative solutions.</p>
+        <p>I love building <span class="highlight">web applications</span>, working with <span class="highlight">AI/ML</span>, and continuously learning new technologies to improve my skills.</p>
+      `,
+      skills: `
+        <div class="skills-section">
+          <h2>My <span class="highlight">Skills</span></h2>
+          <p>Proficient in Python, Java, SQL, HTML, CSS, JavaScript, and React.js. Experienced in AI/ML, web development, and full-stack projects with strong problem-solving and adaptability skills.</p>
+          <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
+            <div class="skill-card"><i class="fab fa-java"></i><p>Java</p></div>
+            <div class="skill-card"><i class="fab fa-html5"></i><p>HTML</p></div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+            <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript</p></div>
+            <div class="skill-card"><i class="fab fa-react"></i><p>React</p></div>
+            <div class="skill-card"><i class="fas fa-database"></i><p>SQL</p></div>
+            <div class="skill-card"><i class="fas fa-brain"></i><p>AI/ML</p></div>
+          </div>
+        </div>
+      `,
+      education: `
+        <h2>My <span class="highlight">Education</span></h2>
+        <p><span class="highlight">Pragati Engineering College, Surampalem, Kakinada</span> — B.Tech in CSE (AI & ML), 2023 - Present</p>
+        <p>Currently in my final year, learning advanced concepts in AI, ML, and Web Development, while working on impactful projects.</p>
+        <p><span class="highlight">Nuzvid Polytechnic College, Venkatadripuram, Nuzvid</span> — DCME, 2020 - 2023</p>
+        <p>Completed diploma with strong foundations in computer engineering, problem-solving, and programming, which prepared me for higher studies.</p>
+        <p><span class="highlight">ZPP High School, Kumarapriyam, Pedapudi</span> — SSC, 2015 - 2020</p>
+        <p>Built strong academic foundations and skills in critical thinking and problem-solving to prepare for higher studies.</p>
+      `,
+      achievements: `
+        <h2>My <span class="highlight">Achievements</span></h2>
+        <ul>
+          <li>🏆 Active problem solver on <span class="highlight">LeetCode</span> and GitHub contributor.</li>
+          <li>🏆 Received outstanding performance at department technical expo for showcasing weather forecasting project using web designing and Weather API.</li>
+          <li>🏆 Coordinated and managed the 'Logic Unlock' event, a PPT presentation competition, ensuring smooth execution and participant engagement.</li>
+          <li>🏆 Developed <span class="highlight">Indian Sign Language to Text/Speech Translator</span> and participated in Smart India Hackathon (College Level).</li>
+        </ul>
+      `
+    };
+
+    function showTab(tab) {
+      document.getElementById('tab-content').innerHTML = tabs[tab];
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.tab-btn[onclick="showTab('${tab}')"]`).classList.add('active');
+    }
+
+    // Navigation active state
+    const navLinksOnClick = document.querySelectorAll("nav a");
+    navLinksOnClick.forEach(link => {
+      link.addEventListener("click", function() {
+        navLinksOnClick.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+    // Scroll-based navigation highlight
+    const sectionsToObserve = document.querySelectorAll('section[id]');
+    const navLinksForScroll = document.querySelectorAll('header nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute('id');
+          navLinksForScroll.forEach(link => link.classList.remove('active'));
+          const activeLink = document.querySelector(`header nav a[href="#${sectionId}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.6 });
+
+    sectionsToObserve.forEach(section => observer.observe(section));
+
+    // Contact form submit without redirect
+    const contactForm = document.getElementById("contact-form");
+    const successMessage = document.getElementById("success-message");
+
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm)
+      })
+      .then(response => {
+        if (response.ok) {
+          successMessage.style.display = "block";
+          contactForm.reset();
+        } else {
+          alert("❌ Something went wrong. Please try again.");
+        }
+      })
+      .catch(() => {
+        alert("❌ Unable to send your message. Check your connection.");
+      });
+    });
+  </script>
+</body>
+</html>
