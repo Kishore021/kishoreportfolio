@@ -269,44 +269,88 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================================================
-       CONTACT FORM
-       ========================================================= */
+    
+/* =========================================================
+   CONTACT FORM - AJAX SUBMISSION
+   ========================================================= */
 
-    const contactForm =
-        document.querySelector("#contact-form");
+const contactForm = document.querySelector("#contact-form");
 
-    if (contactForm) {
+if (contactForm) {
 
-        contactForm.addEventListener("submit", function (event) {
+    const submitButton = contactForm.querySelector(
+        'button[type="submit"]'
+    );
 
-            const submitButton =
-                contactForm.querySelector('button[type="submit"]');
+    const successMessage = document.getElementById(
+        "success-message"
+    );
 
-            if (submitButton) {
+    const errorMessage = document.getElementById(
+        "error-message"
+    );
 
-                submitButton.disabled = true;
+    contactForm.addEventListener("submit", async function (event) {
 
-                const originalText =
-                    submitButton.innerHTML;
+        event.preventDefault();
 
-                submitButton.innerHTML =
-                    '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        if (submitButton.disabled) return;
 
-                /*
-                 * Restore button after a few seconds.
-                 * FormSubmit will handle the actual submission.
-                 */
+        successMessage.style.display = "none";
+        errorMessage.style.display = "none";
 
-                setTimeout(() => {
+        const originalText = submitButton.innerHTML;
 
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = originalText;
+        submitButton.disabled = true;
+        submitButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-                }, 5000);
+        try {
+
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+
+                // Clear form fields
+                contactForm.reset();
+
+                // Show success notification
+                successMessage.textContent =
+                    "Thank you! Your message has been sent successfully. I'll get back to you soon.";
+
+                successMessage.style.display = "block";
+
+            } else {
+
+                throw new Error("Message submission failed.");
+
             }
-        });
-    }
+
+        } catch (error) {
+
+            errorMessage.textContent =
+                "Unable to send your message. Please try again.";
+
+            errorMessage.style.display = "block";
+
+        } finally {
+
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalText;
+
+        }
+
+    });
+
+}
 
 
     /* =========================================================
